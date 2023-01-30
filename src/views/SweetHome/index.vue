@@ -2,7 +2,7 @@
   <div class="app" @click="flag = false">
     <div class="header" :class="SearchFlag === true ? 'wide' : ''">
       <div class="menu-circle" @click="leftSideShow">
-        <img src="../../assets/images/logoG.png" alt="">
+        <img src="../../assets/images/g123.png" alt="">
       </div>
       <div class="header-menu">
         <router-link class="menu-link"

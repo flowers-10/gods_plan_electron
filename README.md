@@ -2,7 +2,17 @@
 
 [toc] 
 
+## 注意事项：
 
+electron版本需要手动和前端项目同步
+
+注意同步 gods_plan_electron\src\views\SweetHome下的index.vue文件！！！！！
+
+注意同步路由，把histroy改为hash
+
+ctrl shift i 打开控制台
+
+这个文件和前端项目不同，添加了右侧的删除缩小缩放功能
 
 
 
@@ -24,7 +34,7 @@
 ---
 
 
-## 一、⭐项目简介
+## ⭐项目简介
 
 热浪网是一个个人音乐博客，包含了音乐流媒体、发现浏览、app主页、博客浏览学习、聊天交流等功能
 
@@ -34,122 +44,6 @@
 ![请添加图片描述](https://img-blog.csdnimg.cn/57948a03f0e14c3797717693e43ab468.png)
 
 tips：手机版左上角G图标可以打开侧边栏
-
-## 二、⭐功能简介
-### ✨1.登录界面
-主要使用了网易云音乐的接口进行登录（手机验证码 or 密码登陆）
-
-🤏可拖拽弹框组件： vue自定义拖拽指令 + 封装组件 + 动态插槽 + 表单验证 + vue transiton动画组件
-
-🔐 权限：动态路由  （update页面只有管理员才能进入）+ token + 路由拦截器（例：我的音乐界面需要登录才能访问，如果用户进入此路由会返回登录界面）
-
-web效果
-
-![请添加图片描述](https://img-blog.csdnimg.cn/b0c6f9c21a6049198d1cebdc31735a96.png)
-
-
-### 🎹2.音乐主页展示
-🖱️可根据滚轮滚动切换高亮标题的二级菜单
-
-![请添加图片描述](https://img-blog.csdnimg.cn/6d8957c707644e6e92bf1f5d6450764c.png)
-
-
-web 效果
-
-![请添加图片描述](https://img-blog.csdnimg.cn/4db0b12a20bd449e973fc99e047b9083.png)
-### 🕶️3. 主题切换
-#### 🕶️ 主题切换：
-切换根节点上的 css lightmodel or darkmodel + css 变量var()
-
-
-#### 🤏封装可拖拽主题切换按钮：
-检测用户是移动端还是pc端，移动端会隐藏按钮，自定义拖拽指令，双击切换全局css
-
-web效果
-![请添加图片描述](https://img-blog.csdnimg.cn/e4c9469ac78a47a1aace0c6c2f5b99ae.png)
-
-#### 切换效果：
-
-mobile效果
-
-💡 light
-![请添加图片描述](https://img-blog.csdnimg.cn/a3e44921d9fb4b73b5ada2bfbcca7f50.png)
-🖤 dark
-![请添加图片描述](https://img-blog.csdnimg.cn/5f8a527416ed43a19c06f5901fbce0d4.png)
-
-
-### 📰 4、文章管理
-富文本编辑器 添加图片：通过接口上传到node服务器，再返回url显示
-
-#### 增加文章类型
-
-![请添加图片描述](https://img-blog.csdnimg.cn/ceccf0ab4b664c03b52bbe7d572915fc.png)
-
-#### 删除选中文章 ： 可多选
-
-![请添加图片描述](https://img-blog.csdnimg.cn/e9dda6d8c0b1481780910f60cba873c6.png)
-
-
-#### 修改文章：
-
-web效果
-![请添加图片描述](https://img-blog.csdnimg.cn/c038d345f2ce4c72848d07d261215539.png)
-
-![请添加图片描述](https://img-blog.csdnimg.cn/85bf609b870041f497058b6b77b7852d.png)
-
-#### 添加文章：
-web效果
-
-![请添加图片描述](https://img-blog.csdnimg.cn/7cc48151e7304a2fafd87303417109c2.png)
-![请添加图片描述](https://img-blog.csdnimg.cn/f0d411e057a048578057b1c7f4744f98.png)
-
-
-### ⭐5.博客分享和知识学习
-跟随滚轮滚动响应的 TOP 按钮
-响应式的文章列表
-
-#### 文章列表展示：
-
-mobile效果
-
-![请添加图片描述](https://img-blog.csdnimg.cn/38e2ed519e2849898b13807cbda2ed97.png)
-
-web效果
-
-![请添加图片描述](https://img-blog.csdnimg.cn/a8aea409a317411c80a930156158c49a.png)
-
-#### 文章内容：
-
-iapd效果
-
-![请添加图片描述](https://img-blog.csdnimg.cn/89f426dcb08f4392967dd511c24ade08.png)
-
-### 🎶 6.歌单列表详情
-mv入口
-歌手界面入口
-专辑页面
-单机歌曲所在的行播放歌曲
-播放全部歌曲（50首以内）
-持久化处理，保存歌单的id，下次通过侧边栏入口进入时会记忆原id的歌单（默认歌单：猜你喜欢）
-封装公共组件 歌曲列表组件 （歌曲列表、歌手最热50首歌曲、播放列表中使用）
-
-ipad效果
-
-![在这里插入图片描述](https://img-blog.csdnimg.cn/b14971e730494124b8f6879217d2e254.png)
-### 🎶7.播放列表
-删除播放列表中的歌曲
-刷新歌曲（最多50首， 网易云的防盗链，歌曲url会过期，刷新歌曲后即可听歌）
-
-ipad效果
-![请添加图片描述](https://img-blog.csdnimg.cn/4dfb18f42a56403eb139ff47e53856c8.png)
-
-### 📺8.mv播放
-
-moblie效果
-
-![在这里插入图片描述](https://img-blog.csdnimg.cn/674c0295a06046ea902065d06b167d6f.png)
-
----
 
 
 
@@ -484,8 +378,6 @@ moblie效果
 
 ~~准备增加异步组件进行代码分包，并且使用loading组件去加载内容~~~ √
 
-为了实现之前吹的牛批，准备去学习cocos做小游戏
-
 再去学习docker部署，去部署二级域名的游戏等等
 
 搜索功能完善
@@ -510,7 +402,7 @@ moblie效果
 ~~2.websocket聊天室~~
 
 咀 2022-04-25 10:22:37
-3.聊天室基础上做你画我猜
+~~3.聊天室基础上做你画我猜~~
 
 咀 2022-04-25 10:24:37
 4.怪物融合类游戏大纲（两只怪物公+母融合，成功率=90%，失败则随机退化成父亲或者母亲，性别随机，1%概率变异成随机，可以挂机升级）

@@ -1,6 +1,6 @@
 {
   "name": "gods_plan",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "dist/electron/index.js",
   "scripts": {
     "dev": "chcp 65001 && cross-env NODE_ENV=development vite serve --mode development",
